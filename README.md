@@ -36,23 +36,22 @@
   - [推論の実行](#推論の実行)
     - [引数一覧](#引数一覧)
   - [まとめ](#まとめ)
+
 ## VQFRとは
 VQFRは、顔復元のためのツールで、TencentARCによって提供されています。
 
 リポジトリには、コードとモデルへのリンクが含まれています。
 
-[GitHub - TencentARC/VQFR](https://github.com/TencentARC/VQFR)
+https://github.com/TencentARC/VQFR
 
 また、以下のデモページでVQFRの動作を確認できます。
 
-[Replicate demo](https://replicate.com/tencentarc/vqfr?prediction=o4zpz3jbosqkcf5nqzj3yo6ojq)
-
-![](https://user-images.githubusercontent.com/2508280/139512011-8f9b8b1a-8e0e-4e9a-8027-3403e22bb385.png)
+https://replicate.com/tencentarc/vqfr?prediction=o4zpz3jbosqkcf5nqzj3yo6ojq
 
 ### 論文
 VQFR: Blind Face Restoration with Vector-Quantized Dictionary and Parallel Decoder
 
-[論文リンク](https://arxiv.org/pdf/2205.06803.pdf)
+https://arxiv.org/pdf/2205.06803.pdf
 
 #### 主なポイント：
 1. **問題設定**: 顔の復元において、入力に忠実な微細な顔の詳細を生成するのは依然として困難である。
@@ -190,8 +189,22 @@ Usage: python demo.py -i inputs/whole_imgs -o results -v 2.0 -s 2 -f 0.1 [option
 このため、READMEにあるVQFRv1モデルが使用できません。（実行中にエラーが発生します）
 一応このエラーには返答がついているのですが、そのとおりにしても解決しませんでした。
 ソースコードに手を入れてデバッグしながら調整しましたが、うまくいきませんでした。
+```bash
+Processing a.jpeg ...
+Segmentation fault (コアダンプ)
+```
+また、時々GPUをリロードしないと問題が解決できないことがありました。
+```bash
+sudo rmmod nvidia_uvm
+sudo rmmod nvidia
+sudo modprobe nvidia
+sudo modprobe nvidia_uvm
+```
+これは私の環境だけで起こるのかもしれません。
 
 また、VQFR_v2.pthモデルがなかなか見つかりませんでしたが、Issueの中にありました。
 すこしもったいないリポジトリだな、というのが正直なところです。
+
+ただし、上述のデモページでは、小さな顔の検出や、一般物の超解像が実現できています。
 
 以上です。ありがとうございました。
