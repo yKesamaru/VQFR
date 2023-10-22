@@ -9,7 +9,7 @@
 
 今回は、`VQFR`です。
 
-![](assets/eye_catch.png)
+![](https://raw.githubusercontent.com/yKesamaru/VQFR/master/assets/eye_catch.png)
 
 ## 出力結果
 顔に特化しすぎた学習モデルなためか、一般物の超解像には向いていないようです。
@@ -17,11 +17,11 @@
 また、人物写真であっても、顔が小さすぎると、同じ様にエラーが出てしまいます。
 ただし認識すれば、4倍の拡大にも耐えられます。
 ### 元画像
-![](assets/2023-10-22-16-07-09.png)
-![](assets/2023-10-22-16-07-35.png)
+![](https://raw.githubusercontent.com/yKesamaru/VQFR/master/assets/2023-10-22-16-07-09.png)
+![](https://raw.githubusercontent.com/yKesamaru/VQFR/master/assets/2023-10-22-16-07-35.png)
 ### 超解像画像
-![](assets/2023-10-22-16-09-12.png)
-![](assets/2023-10-22-16-09-40.png)
+![](https://raw.githubusercontent.com/yKesamaru/VQFR/master/assets/2023-10-22-16-09-12.png)
+![](https://raw.githubusercontent.com/yKesamaru/VQFR/master/assets/2023-10-22-16-09-40.png)
 
 - [画像拡大マスター：超解像セットアップシリーズ③ VQFR](#画像拡大マスター超解像セットアップシリーズ-vqfr)
   - [出力結果](#出力結果)
